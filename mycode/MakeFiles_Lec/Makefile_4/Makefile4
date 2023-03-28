@@ -1,0 +1,14 @@
+
+#FC = gfortran  #Help to change compiler name in on go
+FFLAGS = -O3  #Fortran Flag
+LFLAGS =  #Linking Flag guess to link file
+OBJECTS = main.o sub1.o sub2.o #To store al the file name
+
+output.txt : main.exe
+	./main.exe > output.txt
+	
+main.exe: $(OBJECTS)
+	$(FC) $(LFLAGS) $(OBJECTS) -o main.exe
+	
+%.o: %.f90
+	$(FC) $(FFLAGS) -c $<

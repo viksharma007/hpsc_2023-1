@@ -1,0 +1,8 @@
+
+SOURCES = $(wildcard *.f90)
+OBJECTS = $(subt .f90,.o,$(SOURCES))#To substitute all name of file .f90 with the .o extention with same name 
+.PHONY: test
+
+test:
+	@echo "source are : " $(SOURCES)
+	@echo "Objects are : " $(OBJECTS)

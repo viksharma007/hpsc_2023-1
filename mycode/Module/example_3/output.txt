@@ -1,0 +1,2 @@
+ pi  =   0.54030230586813977     
+ area for the cicle of radius 2:    2.1612092234725591     
